@@ -1,0 +1,27 @@
+\section*{Pr\'iloha C}
+\addcontentsline{toc}{section}{\numberline{}Pr\'iloha C}
+\subsection*{Vytvorenie zoznamu skratiek a symbolov}
+
+Ak sú v~práci skratky a symboly, vytvára sa \emph{Zoznam skratiek
+a~symbolov} (a~ich dešifrovanie). V~prostredí \LaTeX{}u sa takýto
+zoznam
+ľahko vytvorí pomocou balíka \verb+nomencl+. Postup je nasledovný:
+\begin{enumerate}
+\item Do preambuly zapíšeme nasledujúce príkazy\\
+\verb+\usepackage[slovak,noprefix]{nomencl}+\\ \verb+\makeglossary+
+\item  V~mieste, kde má byť\/ vložený zoznam zapíšeme príkaz\\
+\verb+\printglossary+
+\item V miestach, kde sa vyskytujú skratky a symboly ich definíciu
+zavedieme, napr. ako     	v~našom texte, príkazmi\\
+\verb+\nomenclature{$\upmu$}{mikro, $10^{-6}$}+\\
+\verb+\nomenclature{V}{volt, základná jednotka napätia v sústave SI}+\\
+a dokument \uv{pre\LaTeX{}ujeme}.
+\item Z~príkazového riadka spustíme program \verb+makeindex+
+s~prepínačmi podľa použitého operačného systému, napr.~v~OS~GNU/Linux
+s~distribúciou Ubuntu~$10.04$ a~verziou \verb+texlive 2009-7+
+napíšeme:\\
+\verb*+makeindex tukedip.glo -s nomencl.ist -o tukedip.gls+
+\item Po opätovnom \uv{pre\LaTeX{}ovaní} dokumentu sa na
+požadované
+miesto vloží \emph{Zoznam skratiek a symbolov}.
+\end{enumerate}

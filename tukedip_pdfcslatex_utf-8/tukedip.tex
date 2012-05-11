@@ -1,0 +1,193 @@
+
+\documentclass[]{tukediphc}
+\pdfoutput=1
+%% -----------------------------------------------------------------
+%% tento subor ma kodovanie utf-8
+%%
+%% na kompilaciu pouzivajte format pdfcslatex 
+%%
+%% vytvorene distribuciou texlive 2009-7
+%% -----------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{lmodern,textcase}
+\usepackage{slovak}\renewcommand{\figurename}{Obr\'azok}
+\def\refname{Zoznam pou\v{z}itej literat\'ury}
+\usepackage{latexsym}
+\usepackage{dcolumn} % zarovnanie cisiel v tabulke podla des. ciarky
+\usepackage{hhline}
+\usepackage{amsmath}
+\usepackage{nicefrac} % pekne zlomky
+\usepackage{upgreek} % napr. $\upmu\mathrm{m}$ pre mikrometer ...
+\usepackage[final]{showkeys}%color%notref%notcite%final
+\usepackage[slovak,noprefix]{nomencl}
+\makeglossary % prikaz na vytvorenie suboru .glo
+%\usepackage{parskip}% 'zhusti' polozky obsahu
+\usepackage{indentfirst}
+%%
+%\usepackage[dvips]{graphicx}
+%\DeclareGraphicsExtensions{.eps}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.mps}
+\graphicspath{{figures/}} % priecinok na obrazky
+%%
+%% Cislovane citovanie
+%\usepackage[numbers]{natbib}
+%%
+%% Citovanie podľa mena autora a roku
+\usepackage{natbib} \citestyle{chicago}
+% -----------------------------------------------------------------
+%% tlač !!!
+\usepackage[pdftex,unicode=true,bookmarksnumbered=true,
+bookmarksopen=true,pdfmenubar=true,pdfview=Fit,linktocpage=true,
+pageanchor=true,bookmarkstype=toc,pdfpagemode=UseOutlines,
+pdfstartpage=1]{hyperref}
+\hypersetup{%
+baseurl={http://www.tuke.sk/sevcovic},
+pdfcreator={pdfcsLaTeX},
+pdfkeywords={Optimaliz\'acia, diplomov\'a pr\'aca, p\'isanie},
+pdftitle={Optimalizácia písania diplomových prác},
+pdfauthor={J\'an Zelen\'y},
+pdfsubject={Bakalárska práca}
+} 
+%% nehodiace zakomentujte !
+%\dippraca{Diplomová práca}
+\bakpraca{Bakalárska práca}
+%%
+\nazov{Inventárny systém pre platformu Android}
+%% ked praca nema 'podnazov' zakomentujte nasledujuci riadok
+%% alebo polozku nechajte prazdnu
+%\podnazov{}
+\autor{Vlastimil Brečka}
+\veduciprace{Ing.~Peter~Feciľak, PhD.}
+\konzultanta{Ing.~Peter~Feciľak, PhD.}
+%\konzultantb{}
+\univerzita{Technická univerzita v~Košiciach}
+\fakulta{Fakulta elektrotechniky a informatiky}
+\skratkafakulty{FEI}
+\katedra{Katedra počítačov a informatiky}
+\skratkakatedry{KPI}
+\odbor{9.2.1 Informatika}
+\specializacia{Informatika}
+\abstrakt{Cieľom bakalárskej práce bol návrh a implementácia aplikácie inventárneho systému pre platformu Android. Aplikácia je schopná prevziať aktuálny inventárny zoznam zo servera, ktorý je možno členiť do osobitých miestností. Kontrola inventáru prebieha načítaním QR kódu umiestneného na predmete pomocou vstavanej kamery mobilného telefónu a jeho následným spracovaním aplikáciou. Aplikácia má následne možnosť exportovať výsledky invetúry v podobe správy vo formáte HTML na server alebo lokálne na SD-kartu a rozoslať e-mailové notifikácie.}
+\klucoveslova{Inventárny systém, inventúra, Android, QR kód}
+\abstrakte{The goal of bachelor‘s work was to design and implement inventory system application for Android platform. Application is able to download current inventory list from server and divide it into separate rooms. The actual inventory lookup is performed by scanning the QR code, placed on the item, via mobile phone‘s embedded camera and processing its content by the application. Upon completion, the application is able to export results as a HTML report to server or locally to phone's SD-card and send out e-mail notifications.}
+\keywords{Inventory system, inventory lookup, Android, QR code}
+\datumodovzdania{25. 5. 2012}
+\mesto{Košice}
+
+\begin{document}
+\renewcommand\theHfigure{\theHsection.\arabic{figure}}
+\renewcommand\theHtable{\theHsection.\arabic{table}}
+\bibliographystyle{dcu}
+
+\prvastrana
+
+\titulnastrana
+
+\abstraktsk % abstrakt v SK 
+
+\abstrakteng % abstrakt v ENG
+
+\kabstrakt % koniec abstraktov, nova strana
+
+% Na tomto mieste bude vložené zadanie diplomovej práce
+\zadanieprace
+
+\cestnevyhlasenie
+% Niektorí autori metodických príručiek o~záverečných prácach sa
+% nazdávajú, že takéto vyhlásenie je zbytočné, nakoľko povinnosť
+% vypracovať záverečnú prácu samostatne, vyplýva študentovi zo zákona a
+% na autora práce sa vzťahuje autorský zákon.
+
+\podakovanie
+Chcel by som vyjadriť poďakovanie vedúcemu práce Ing. Petrovi Feciľakovi, PhD. za pripomienky pri vypracovaní práce a Branislavovi Dlugošovi za zapožičanie zariadenia mobilného telefónu.
+\kpodakovania
+
+\predhovor
+
+Dlhotrvajúci trend vzrastajúcej popularity smartfónov v dnešnej dobe dáva možnosť a priestor softvérovým vývojárom ako ovplyvniť ďalšiu sféru ľudského života.
+
+Hlavný dôvod, ktorý ma viedol k výberu témy je aktuálnosť modernej problematiky a predchádzajúci záujem o vytváranie aplikácií pre platformu Android. Značné rozšírenie platformy Android zväčšuje možný dosah používateľov pre danú aplikáciu. Znalosť platformy dáva možnosť vývojárom osloviť týchto potencionálnych zákazníkov poskytnutými riešeniami, rozšíriť svoje portfólio prác a zlepšiť takto svoju pozíciu na trhu práce. Bakalársku prácu som preto považoval za vhodnú príležitosť ako si plne osvojiť túto inak veľmi zaujímavú tému aj z praktických dôvodov.
+
+Cieľom tejto práce je návrh a implementácia aplikácie inventárneho systému pre mobilnú platformu Android, ktorá zjednoduší a zefektívni procesy potrebné pri inventúre na katedre. Použité moderné postupy vykonávania inventúry sprehľadňujú a urýchľujú inak zdĺhavý úkon inventúry. Poskytnuté riešenia umožňujú taktiež jednoduchú a nenáročnú archiváciu.
+
+V práci sa taktiež venujem stavbe operačného systému Android a teórií vývoja a základnej štruktúre vytváraných aplikácií. 
+
+\kpredhovoru
+
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+\thispagestyle{empty}
+%\addcontentsline{toc}{section}{\numberline{}Zoznam obrázkov}
+\listoffigures
+\newpage
+
+\thispagestyle{empty}
+%\addcontentsline{toc}{section}{\numberline{}Zoznam tabuliek}
+\listoftables
+\newpage
+
+\thispagestyle{empty}
+%\addcontentsline{toc}{section}{\numberline{}Zoznam symbolov a
+%skratiek}
+\printglossary % vlozenie zoznamu skratiek a symbolov
+\newpage
+
+%\addcontentsline{toc}{section}{\numberline{}Slovník termínov}
+\slovnikterminov
+
+\begin{description}
+
+	\item[Operačný systém] je softvér, ktorý spravuje zdroje počítača
+a poskytuje programátorom rozhranie pre prístup k týmto zdrojom. Operačný
+systém tiež spracúva dáta a a vstupy od používateľa a odpovedá alokovaním
+a spravovaním úloh a interných zdrojov počítača ako služby pre používateľa.
+
+	\item[Používateľské rozhrania] sú programy a zariadenia, ktoré sú k dispozícií používateľovi systému na spracovanie dát.
+
+	\item[Java] je objektovo orientovaný programovací jazyk. Je vyvíjaný spoločnosťou Oracle. Jeho syntax vychádza z jazykov C a C++. Zdrojové programy sa nekompilujú do strojového kódu, ale do medzistupňa, tzv. bajt kódu, ktorý nie je závislý na konkrétnej platforme.
+
+\item[Softvérový vývojový balíček] je súhrn nástrojov pre vývoj softvéru, ktorý umožňuje vytváranie aplikácií pre určitú platformu, framework, operačný systém.
+
+	\item[Debugovanie] je metodologický proces hľadania a redukovania počtu chýb a defektov v počítačovom programe s cieľom zabezpečenia korektného chovania aplikácie.
+
+	\item[Virtuálny stroj] je softvér, ktorý vytvára virtualizované prostredie medzi platformou počítača a operačným systémom, v ktorom koncový používateľ môže používať softvér na abstraktnom stroji.
+Framework je softvérová štruktúra, ktorá slúži na podporu programovania a vývoj iných softvérových projektov. Môže obsahovať podporné programy, knižnice API alebo podporu pre návrhové vzory.
+
+\end{description}
+
+\kslovnikterminov
+%
+\include{uvod}
+%
+\include{formulacia}
+%
+\include{analyza}
+%
+\include{jadroprace}
+%
+\include{zaver}
+%
+\include{literatura}
+%
+\include{prilohy}
+%
+\include{prilohaa}
+%
+\include{prilohab}
+%
+\include{prilohac}
+%
+% zivotopis autora
+\curriculumvitae\protect\label{page:posledna}
+Táto časť\/ je nepovinná. Autor tu môže uviesť\/ svoje biografické
+údaje, údaje o~záujmoch, účasti na~projektoch, účasti na~súťažiach,
+získané ocenenia, zahraničné pobyty na~praxi, domácu prax, publikácie
+a~pod.
+\kcurriculumvitae
+
+\end{document}
+%%

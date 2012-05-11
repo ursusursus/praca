@@ -1,0 +1,23 @@
+This is makeindex, version 2.15 [TeX Live 2010] (kpathsea + Thai support).
+Scanning style file c:/texlive/2011/texmf-dist/makeindex/nomencl/nomencl.ist.......
+** Input style error (file = c:/texlive/2011/texmf-dist/makeindex/nomencl/nomencl.ist, line = 70):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = c:/texlive/2011/texmf-dist/makeindex/nomencl/nomencl.ist, line = 71):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = c:/texlive/2011/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
+   -- Unknown specifier lethead_flag.
+...done (10 attributes redefined, 3 ignored).
+Scanning input file tukedip.glo...
+!! Input index error (file = tukedip.glo, line = 1):
+   -- Unknown index keyword \glossaryentry.
+!! Input index error (file = tukedip.glo, line = 2):
+   -- Unknown index keyword \glossaryentry.
+!! Input index error (file = tukedip.glo, line = 3):
+   -- Unknown index keyword \glossaryentry.
+!! Input index error (file = tukedip.glo, line = 4):
+   -- Unknown index keyword \glossaryentry.
+!! Input index error (file = tukedip.glo, line = 5):
+   -- Unknown index keyword \glossaryentry.
+done (0 entries accepted, 5 rejected).
+Nothing written in tukedip.gls.
+Transcript written in tukedip.ilg.

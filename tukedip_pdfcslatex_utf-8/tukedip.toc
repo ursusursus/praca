@@ -1,0 +1,11 @@
+\contentsline {section}{\hbox to\@tempdima {\hfil }\'Uvod}{1}{section*.7}
+\contentsline {section}{\numberline {1}Formul\'acia \'ulohy}{3}{section.1}
+\contentsline {section}{\numberline {2}Anal\'yza}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Podkapitola}{5}{subsection.2.1}
+\contentsline {section}{\numberline {3}Jadro pr\'ace}{6}{section.3}
+\contentsline {section}{\numberline {4}Z\'aver (zhodnotenie rie\v {s}enia)}{7}{section.4}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Zoznam pou\v {z}itej literat\'ury}{8}{section*.8}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Zoznam pr\'iloh}{9}{section*.9}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Pr\'iloha A}{10}{section*.10}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Pr\'iloha B}{11}{section*.12}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Pr\'iloha C}{14}{section*.14}
